@@ -3,7 +3,8 @@ package com.segunda.ejemplodoscurso.models;
 public class User {
 
     private String name;
-    private  String lastname;
+    private String lastname;
+    private String  email;
 
     // Este es el constructor de la API
     public User(String name, String lastname) {
@@ -27,5 +28,11 @@ public class User {
         this.lastname = lastname;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

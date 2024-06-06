@@ -61,6 +61,10 @@
         <h1 th:text="${welcome}"></h1>
         <p th:text="${description}"></p>
         <a href="#" class="cta-button">Learn More</a>
+        <ul>
+        <li th:if="${user.email} AND ${user.email.isEmpty()}" th:text="${user.email}"></li>
+        <li th:if="${user.email == null} OR ${user.email == ''}" th:text="${'No esta presente el Email del usuario'}"></li>
+        </ul>
     </div>
 </div>
 </body>
