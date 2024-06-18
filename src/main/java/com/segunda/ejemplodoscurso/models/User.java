@@ -6,6 +6,16 @@ public class User {
     private String lastname;
     private String  email;
 
+    // Se agrega un constructor vacio a sgerencia del instructor
+    public User() {
+    }
+
+    // Se agrega otro constructor para el Email y se simplifica el constructor de User
+    public User(String name, String lastname, String email) {
+        this(name,lastname);
+        this.email = email;
+    }
+
     // Este es el constructor de la API
     public User(String name, String lastname) {
         this.name = name;

@@ -13,17 +13,20 @@
 <h1 th:text="${title}">Document</h1>
 <div th:if="${users.isEmpty()}" th:text="${'No tiene una lista de usuarios tadavia'}"> </div>
 
-<table>
+<table th:if="${not users.isEmpty()}">
     <thead>
     <tr>
         <th>Nombre</th>
-        <th>Aoellido</th>
+        <th>Apellido</th>
         <th>Email</th>
     </tr>
     </thead>
 <tbody>
-<tr>
-    <td></td>
+<tr th:each="user: ${users}">
+    <td th:text="${user.name}"></td>
+    <td th:text="${user.lastname}"></td>
+    <td th:if="${user.email}" th:text="${user.email}"></td>
+    <td th:if="${user.email == null}" th:text="${'NO EMAIL'}"></td>
 </tr>
 </tbody>
 
